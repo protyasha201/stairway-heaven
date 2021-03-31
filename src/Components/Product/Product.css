@@ -1,0 +1,47 @@
+.productContainer{
+    border-radius: 10px;
+    height: 450px;
+    width: 300px;
+    background-color: rgb(74, 74, 98);
+}
+
+.productImg{
+    height: 60%;
+    border-radius: 10px;
+}
+
+.productImg img{
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.productDetail{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    padding: 5px;
+}
+
+
+.productDetail .priceAndBuy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priceAndBuy .buyBtn{
+    height: 40px;
+    background-color: coral;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    color: white;
+    transition: .4s all ease;
+    width: 120px;
+}
+
+.priceAndBuy .buyBtn:hover{
+    background-color: cornflowerblue;
+}

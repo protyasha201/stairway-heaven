@@ -24,11 +24,12 @@
 .links{
     color: coral;
     font-size: 18px;
-    transition: .3s color ease-in;
+    transition: .3s all ease-in;
 }
 
 .links:hover{
     color: white;
+    transform: scale(1.2);
 }
 .navLinks .loginBtn{
     background-color: cornflowerblue;
@@ -45,4 +46,5 @@
 .navLinks .loginBtn:hover{
     background-color: white;
     color: black;
+    transform: scale(1.02);
 }

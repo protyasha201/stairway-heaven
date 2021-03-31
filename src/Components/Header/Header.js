@@ -13,7 +13,7 @@ const Header = () => {
             <div className="navLinks">
                 <a className="links" href="#">Home</a>
                 <a className="links" href="#">Orders</a>
-                <a href="/admin" className="links">Admin</a>
+                <a href="/admin/addProduct" className="links">Admin</a>
                 <a className="links" href="#">Deals</a>
                 <button onClick={goToLogin} className="loginBtn">Login</button>
             </div>

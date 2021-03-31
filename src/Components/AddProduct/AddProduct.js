@@ -69,6 +69,7 @@ const AddProduct = () => {
     return (
         <div className="addProductContainer">
             <h3>Add Product</h3>
+            <h6 style={{textAlign: 'center'}}>Please wait for a while before saving</h6>
             <form className="addForm">
                 <div>
                     <h4>Product Name</h4>
