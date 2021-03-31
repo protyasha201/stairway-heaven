@@ -1,0 +1,67 @@
+.addProductContainer {
+    width: 75%;
+    margin-left: 20%;
+    padding: 25px;
+}
+
+.addProductContainer h3 {
+    font-size: 30px;
+    color: rgb(98, 120, 230);
+}
+
+.addForm {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 85%;
+    margin-top: 50px;
+    row-gap: 30px;
+}
+
+.addForm input {
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: white 1px solid;
+    align-items: center;
+}
+
+.addForm .uploadContainer {
+    margin-top: 10px;
+}
+
+.addForm h4 {
+    color: rgb(164, 159, 157);
+    font-size: 18px;
+}
+
+.addForm label {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: ease .3s all;
+}
+
+.addForm label:hover{
+    background-color: rgb(196, 202, 213);
+    color: black;
+}
+
+.addProductBtn{
+    border:none;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: coral;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    left: 800px;
+}

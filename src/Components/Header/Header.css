@@ -1,0 +1,48 @@
+*{
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header h2{
+    color: rgb(162, 152, 152);
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.navLinks{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links{
+    color: coral;
+    font-size: 18px;
+    transition: .3s color ease-in;
+}
+
+.links:hover{
+    color: white;
+}
+.navLinks .loginBtn{
+    background-color: cornflowerblue;
+    color: white;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: .4s all ease-in-out;
+}
+
+.navLinks .loginBtn:hover{
+    background-color: white;
+    color: black;
+}
