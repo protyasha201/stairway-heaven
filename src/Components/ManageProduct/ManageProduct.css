@@ -1,5 +1,46 @@
-.manageProductContainer{
+.manageProductContainer {
     width: 80%;
     margin-left: 20%;
-    border: white 1px solid;
+    margin-top: 50px;
+}
+
+.manageProductContainer .manageProducts {
+    width: 90%;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.manageProductContainer h2{
+    color: rgb(135, 135, 142);
+    margin-left: 20px;
+}
+.manageProductContainer .titles, .allProducts {
+    border: 1px solid rgb(81, 76, 76);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(20, 22, 52);
+}
+
+.titles h4{
+    color: rgb(124, 211, 111);
+}
+.allProducts {
+    margin-top: 20px;
+    border: none;
+    background-color: white;
+}
+
+.allProducts h3 {
+    color: rgb(62, 57, 57);
+    font-weight: 400;
+}
+
+.icon{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }

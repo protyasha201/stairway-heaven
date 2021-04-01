@@ -9,7 +9,8 @@ const AddProduct = () => {
         name: '',
         price: null,
         wight: '',
-        imageUrl: ''
+        imageUrl: '',
+        quantity: 0
     })
     const uploadImage = e => {
         console.log("selected");
@@ -19,7 +20,7 @@ const AddProduct = () => {
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
-                const newProductUpdate = {...newProduct};
+                const newProductUpdate = { ...newProduct };
                 newProductUpdate.imageUrl = response.data.data.display_url
                 setNewProduct(newProductUpdate);
             })
@@ -29,18 +30,18 @@ const AddProduct = () => {
     }
 
     const handleBlur = e => {
-        if(e.target.name === "name"){
-            const newProductUpdate = {...newProduct};
+        if (e.target.name === "name") {
+            const newProductUpdate = { ...newProduct };
             newProductUpdate.name = e.target.value;
             setNewProduct(newProductUpdate);
         }
-        if(e.target.name === "wight"){
-            const newProductUpdate = {...newProduct};
+        if (e.target.name === "wight") {
+            const newProductUpdate = { ...newProduct };
             newProductUpdate.wight = e.target.value;
             setNewProduct(newProductUpdate);
         }
-        if(e.target.name === "price"){
-            const newProductUpdate = {...newProduct};
+        if (e.target.name === "price") {
+            const newProductUpdate = { ...newProduct };
             newProductUpdate.price = e.target.value;
             setNewProduct(newProductUpdate);
         }
@@ -51,25 +52,25 @@ const AddProduct = () => {
             name: newProduct.name,
             wight: newProduct.wight,
             price: newProduct.price,
-            imageUrl: newProduct.imageUrl
+            imageUrl: newProduct.imageUrl,
+            quantity: newProduct.quantity
         };
 
         const url = 'http://localhost:5000/addProduct';
 
-        fetch(url,{
+        fetch(url, {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(productData)
         })
-        .then(res =>res.json())
-        .then(data => console.log(data))
+            .then(res => res.json())
+            .then(data => console.log(data))
     }
-
 
     return (
         <div className="addProductContainer">
             <h3>Add Product</h3>
-            <h6 style={{textAlign: 'center'}}>Please wait for a while before saving</h6>
+            <h6 style={{ textAlign: 'center' }}>Please wait for a while before saving</h6>
             <form className="addForm">
                 <div>
                     <h4>Product Name</h4>
@@ -90,7 +91,7 @@ const AddProduct = () => {
                 </div>
                 <button onClick={addProduct} className="addProductBtn">Save</button>
             </form>
-        </div >
+        </div>
     );
 };
 

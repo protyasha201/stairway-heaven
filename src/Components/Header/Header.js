@@ -11,10 +11,10 @@ const Header = () => {
         <div className="header">
             <h2>STAIRWAY HEAVEN</h2>
             <div className="navLinks">
-                <a className="links" href="#">Home</a>
-                <a className="links" href="#">Orders</a>
-                <a href="/admin/addProduct" className="links">Admin</a>
-                <a className="links" href="#">Deals</a>
+                <Link className="links" to="/home">Home</Link>
+                <Link className="links" to="/orders">Orders</Link>
+                <Link to="/admin/addProduct" className="links">Admin</Link>
+                <Link className="links" to="/deals">Deals</Link>
                 <button onClick={goToLogin} className="loginBtn">Login</button>
             </div>
         </div>

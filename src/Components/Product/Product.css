@@ -20,9 +20,12 @@
     display: flex;
     flex-direction: column;
     height: 40%;
-    padding: 5px;
+    padding: 10px;
 }
 
+.productDetail h3{
+    height: 40px;
+}
 
 .productDetail .priceAndBuy{
     display: flex;
