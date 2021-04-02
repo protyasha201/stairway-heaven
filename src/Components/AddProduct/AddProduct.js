@@ -56,7 +56,7 @@ const AddProduct = () => {
             quantity: newProduct.quantity
         };
 
-        const url = 'https://young-citadel-50455.herokuapp.com/addProducts';
+        const url = 'https://young-citadel-50455.herokuapp.com/addProduct';
 
         fetch(url, {
             method: 'POST',
