@@ -47,7 +47,7 @@ const AddProduct = () => {
         }
 
     }
-    const addProduct = () => {
+    const addProduct = e => {
         const productData = {
             name: newProduct.name,
             wight: newProduct.wight,
@@ -56,7 +56,7 @@ const AddProduct = () => {
             quantity: newProduct.quantity
         };
 
-        const url = 'http://localhost:5000/addProduct';
+        const url = 'https://young-citadel-50455.herokuapp.com/addProducts';
 
         fetch(url, {
             method: 'POST',
@@ -65,6 +65,9 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+        
+        alert('Data saved');
+        e.preventDefault();
     }
 
     return (

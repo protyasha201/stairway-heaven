@@ -12,13 +12,13 @@ const Checkout = () => {
 
     const orders = {...loggedInUser, ...selectedProduct, orderPlaced: new Date().toDateString()};
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://young-citadel-50455.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => setSelectedProduct(data))
     }, [id])
 
     const handleCheckout = () => {
-        fetch('http://localhost:5000/addOrders', {
+        fetch('https://young-citadel-50455.herokuapp.com/addOrders', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(orders)
