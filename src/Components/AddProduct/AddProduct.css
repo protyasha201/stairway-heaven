@@ -65,3 +65,24 @@
     position: relative;
     left: 800px;
 }
+
+@media screen and (max-width: 500px) {
+    .addProductContainer{
+        margin-left: 10px;
+        margin-top: 100px;
+    }
+    .addProductBtn{
+        left: 200px;
+    }
+    .addForm label{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .addForm{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .addForm input{
+        width: 90%;
+    }
+}

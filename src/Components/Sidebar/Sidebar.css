@@ -9,7 +9,7 @@
     flex-direction: column;
 }
 
-.sideBar a{
+.sideBar .sideLinks{
     color: coral;
     margin-top: 30px;
     font-size: 20px;
@@ -20,13 +20,13 @@
     border-radius: 10px;
 }
 
-.sideBar a:hover{
+.sideBar .sideLinks:hover{
     color: cornflowerblue;
     background-color: rgb(27, 23, 23);
     transform: scale(1.02);
 }
 
-.sideBar a .adminIcons{
+.sideBar .sideLinks .adminIcons{
     margin-right: 10px;
     color:rgb(143, 221, 143);
 }
@@ -35,4 +35,23 @@
     width: 80%;
     margin-left: 20%;
     padding: 25px;
+}
+
+@media screen and (max-width: 500px) {
+    .sideBar{
+        position: absolute;
+        flex-direction: row;
+        bottom: 600px;
+        padding: 0%;
+        opacity: 2;
+    }
+    .sideBar h2{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .sideBar .sideLinks{
+        padding: 0;
+        font-size: 15px;
+        text-align: center;
+    }
 }

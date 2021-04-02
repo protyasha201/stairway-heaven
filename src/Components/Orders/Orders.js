@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
 import Header from '../Header/Header';
+import './Orders.css';
 
 const Orders = () => {
     const [orderedProducts, setOrderedProducts] = useState([]);
@@ -10,20 +11,24 @@ const Orders = () => {
         fetch(`http://localhost:5000/orders?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setOrderedProducts(data))
-    },[loggedInUser.email])
+    }, [loggedInUser.email])
+
     return (
         <div>
             <Header />
-            <div>
-                <h1>ALL ORDERS</h1>
-                <div>
+            <div className="orderBox">
+                <h1 className="orderTitle">YOUR ORDERS</h1>
+                <div className="orders">
                     {
                         orderedProducts.map(order =>
-                            <div key={order._id}>
-                                <h1>{order.name}</h1>
-                                <h1>{order.orderPlaced}</h1>
+                            <div className="orderContainer" key={order._id}>
+                                <img alt={order.name} src={order.imageUrl} />
+                                <div>
+                                    <h4>{order.name} {order.wight}</h4>
+                                    <h5>Order was placed in: {order.orderPlaced}</h5>
+                                    <hr/>
+                                </div>
                             </div>
-
                         )
                     }
                 </div>

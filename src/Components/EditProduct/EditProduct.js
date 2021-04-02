@@ -4,7 +4,7 @@ import './EditProducts.css';
 const EditProduct = () => {
     return (
         <div className="editProductContainer">
-            <h1>Edit here</h1>
+            <h1>Editing Feature is not available now</h1>
         </div>
     );
 };

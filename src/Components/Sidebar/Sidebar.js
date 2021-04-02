@@ -9,9 +9,9 @@ const Sidebar = () => {
         <div>
             <div className="sideBar">
                 <h2>STAIRWAY HEAVEN</h2>
-                <Link to="/admin/manageProduct"><FontAwesomeIcon className="adminIcons" icon={faCube} />Manage Product</Link>
-                <Link to="/admin/addProduct"><FontAwesomeIcon className="adminIcons" icon={faPlus} />Add Product</Link>
-                <Link to="/admin/editProduct"><FontAwesomeIcon className="adminIcons" icon={faPen} />Edit Product</Link>
+                <Link className="sideLinks" to="/admin/manageProduct"><FontAwesomeIcon className="adminIcons" icon={faCube} />Manage Product</Link>
+                <Link className="sideLinks" to="/admin/addProduct"><FontAwesomeIcon className="adminIcons" icon={faPlus} />Add Product</Link>
+                <Link className="sideLinks" to="/admin/editProduct"><FontAwesomeIcon className="adminIcons" icon={faPen} />Edit Product</Link>
             </div>
         </div>
     );

@@ -48,3 +48,9 @@
 .priceAndBuy .buyBtn:hover{
     background-color: cornflowerblue;
 }
+
+@media screen and (max-width: 500px) {
+    .productContainer {
+        width: 350px;
+    }
+}

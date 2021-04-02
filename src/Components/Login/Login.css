@@ -32,3 +32,9 @@
     transform: scale(1.02);
     background-color: rgb(62, 62, 64);
 }
+
+@media screen and (max-width: 500px) {
+    .login{
+        width: 60%;
+    }
+}
