@@ -1,17 +1,28 @@
+import React, { createContext, useState } from 'react';
 import './App.css';
 import Home from './Components/Home/Home';
 import Admin from './Components/Admin/Admin';
 import ManageProduct from './Components/ManageProduct/ManageProduct';
 import Checkout from './Components/Checkout/Checkout';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Orders from './Components/Orders/Orders';
 import Deals from './Components/Deals/Deals';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Login from './Components/Login/Login';
 
+export const UserContext = createContext([]);
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({
+    isLoggedIn: false,
+    name: '',
+    email: '',
+    photoURL: ''
+  });
   return (
-    <Router>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+
+      <Router>
         <Switch>
           <Route path="/admin">
             <Admin />
@@ -23,22 +34,23 @@ function App() {
             <Home />
           </Route>
           <Route path="/manageProduct">
-          <ManageProduct />
+            <ManageProduct />
           </Route>
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/checkout/:id">
+          <PrivateRoute path="/checkout/:id">
             <Checkout />
-          </Route>
-          <Route path="/orders">
+          </PrivateRoute>
+          <PrivateRoute path="/orders">
             <Orders />
-          </Route>
+          </PrivateRoute>
           <Route path="/deals">
             <Deals />
           </Route>
         </Switch>
-    </Router>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

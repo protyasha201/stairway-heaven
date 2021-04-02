@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Product from '../Product/Product';
 import './Home.css';
 
+
 const Home = () => {
     const [products, setProducts] = useState([]);
 

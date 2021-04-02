@@ -3,12 +3,23 @@ import { useHistory } from 'react-router';
 import './Product.css';
 
 const Product = (props) => {
-    const { name, imageUrl, price, _id, wight } = props.product;
+    let { name, imageUrl, price, _id, wight,quantity } = props.product;
 
     const history = useHistory();
-
-    const handleClick = id => {
+    
+    const buyProduct = id => {
         history.push(`/checkout/${id}`);
+        
+        quantity = quantity + 1;
+        const product = {id, price, name, imageUrl, wight, quantity};
+        
+        fetch(`http://localhost:5000/update/${id}`, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(data => console.log('updated'))
     }
     return (
         <div className="productContainer">
@@ -23,7 +34,7 @@ const Product = (props) => {
                     {
                         price ? <h2>${price}</h2> : <h2>$230</h2>
                     }
-                    <button className="buyBtn" onClick={() => handleClick(_id)}>Buy Now</button>
+                    <button className="buyBtn" onClick={() => buyProduct(_id)}>Buy Now</button>
                 </div>
             </div>
         </div>

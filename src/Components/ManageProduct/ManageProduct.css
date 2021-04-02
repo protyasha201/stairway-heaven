@@ -30,17 +30,32 @@
 .allProducts {
     margin-top: 20px;
     border: none;
+    display: flex;
     background-color: white;
 }
 
 .allProducts h3 {
     color: rgb(62, 57, 57);
     font-weight: 400;
+    width: 270px;
+    text-align: center;
+    position: relative;
+    left: 30px;
+}
+
+.allProducts .name{
+    text-align: justify;
 }
 
 .icon{
-    width: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    column-gap: 15px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.deleteIcon{
+    cursor: pointer;
+    color: rgb(15, 64, 95);
 }
