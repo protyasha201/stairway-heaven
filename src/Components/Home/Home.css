@@ -30,9 +30,15 @@
     cursor: pointer;
     color: white;
 }
-
+.spinner{
+    position: relative;
+    left: 520px;
+}
 @media  screen and (max-width: 500px) {
     .products{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .spinner{
+        left: 0%;
     }
 }

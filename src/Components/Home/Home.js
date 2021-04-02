@@ -1,3 +1,4 @@
+import { CircularProgress } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import Product from '../Product/Product';
@@ -21,6 +22,12 @@ const Home = () => {
                 <button className="searchBtn">Search</button>
             </div>
             <div className="products">
+                {
+                    products.length === 0 && 
+                    <div className="spinner">
+                        <CircularProgress />
+                    </div>
+                }
                 {
                     products.map(product => <Product key={product._id} product={product}/>)
                 }
