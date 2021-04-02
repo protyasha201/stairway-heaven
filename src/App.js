@@ -24,9 +24,9 @@ function App() {
 
       <Router>
         <Switch>
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
             <Admin />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/">
             <Home />
           </Route>

@@ -1,21 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { UserContext } from '../../App';
 import Header from '../Header/Header';
 import './Checkout.css';
 
 
 const Checkout = () => {
+    const [loggedInUser] = useContext(UserContext);
     const [selectedProduct, setSelectedProduct] = useState([]);
     const { id } = useParams();
 
+    const orders = {...loggedInUser, ...selectedProduct, orderPlaced: new Date().toDateString()};
     useEffect(() => {
         fetch(`http://localhost:5000/product/${id}`)
             .then(res => res.json())
             .then(data => setSelectedProduct(data))
     }, [id])
 
-
     const handleCheckout = () => {
+        fetch('http://localhost:5000/addOrders', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(orders)
+        })
+        .then(res => res.json())
+        .then(result => console.log('checkout successful'))
+
         alert("Your Checkout has been successfully added!");
     }
 
