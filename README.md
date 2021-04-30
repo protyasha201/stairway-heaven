@@ -14,4 +14,5 @@ This Website is a e-commerce site made with react and has it's own database.
   <li>All components are dynamic</li>
   <li>Used MongoDb as database</li>
   <li>CRUD used in backend</li>
+  <li>Responsive</li>
 </ul>
